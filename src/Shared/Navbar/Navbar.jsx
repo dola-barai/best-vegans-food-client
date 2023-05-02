@@ -6,7 +6,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
 
-    const {user} = useContext(AuthContext)
+    const { user, signInUser } = useContext(AuthContext)
     return (
         <div >
         <div className="navbar bg-purple-200">
@@ -22,12 +22,12 @@ const Navbar = () => {
               
             </div>
             <div className="navbar-end">
-              {user ?
-              <h2>{user.displayName}</h2> :
+              {signInUser ?
+              <h2>{user?.displayName}</h2> :
               <UserCircleIcon className="mr-3 h-8 w-8 text-purple-800" /> 
               
               }
-              {user ?
+              {signInUser ?
                 <button className="btn btn-primary h-2 w-20">Logout</button> :
                 <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
               }
