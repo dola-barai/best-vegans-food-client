@@ -1,9 +1,10 @@
+import Banner from "../../Pages/Banner/Banner";
 
 
 const MainContainer = () => {
     return (
         <div>
-            <h3>Main COntainer</h3>
+            <Banner></Banner>
         </div>
     );
 };

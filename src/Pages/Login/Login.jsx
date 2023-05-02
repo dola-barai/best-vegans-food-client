@@ -31,7 +31,7 @@ const Login = () => {
         })
     }
 
-    const googleLogin = event => {
+    const googleLogin = () => {
         signPopUpGoogle()
         .then(result => {
             const logUser = result.user;
@@ -42,7 +42,7 @@ const Login = () => {
         })
     }
 
-    const githubLogin = event => {
+    const githubLogin = () => {
         signPopUpGithub()
         .then(result => {
             const logUser = result.user;
