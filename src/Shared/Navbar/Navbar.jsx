@@ -1,8 +1,12 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { UserCircleIcon } from '@heroicons/react/24/solid'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
+
+    const {user} = useContext(AuthContext)
     return (
         <div >
         <div className="navbar bg-purple-200">
@@ -18,8 +22,15 @@ const Navbar = () => {
               
             </div>
             <div className="navbar-end">
-              <UserCircleIcon className="h-8 w-8 text-purple-800" />
-              <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
+              {user ?
+              <h2>{user.displayName}</h2> :
+              <UserCircleIcon className="mr-3 h-8 w-8 text-purple-800" /> 
+              
+              }
+              {user ?
+                <button className="btn btn-primary h-2 w-20">Logout</button> :
+                <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
+              }
             </div>
           </div>
          </div>

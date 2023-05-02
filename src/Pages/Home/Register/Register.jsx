@@ -1,19 +1,24 @@
+import { Link } from "react-router-dom";
+import Footer from "../../../Shared/Footer/Footer";
+import Navbar from "../../../Shared/Navbar/Navbar";
 
-import { Link } from 'react-router-dom';
-import Footer from '../../Shared/Footer/Footer';
-import Navbar from '../../Shared/Navbar/Navbar';
 
-const Login = () => {
+const Register = () => {
     return (
         <div>
-            <Navbar></Navbar>
+           <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
              <div className="hero-content flex-col lg:flex-row-reverse">
                
                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                
                  <div className="card-body">
-                 <h2 className="text-2xl font-bold text-center">Sign In</h2>
+                    <h2 className="text-2xl font-bold text-center">Sign Up</h2>
+                 <div className="form-control">
+                     <label className="label">
+                       <span className="label-text">Full Name</span>
+                     </label>
+                     <input type="text" placeholder="your name" name="name" className="input input-bordered" required/>
+                   </div>
                    <div className="form-control">
                      <label className="label">
                        <span className="label-text">Email</span>
@@ -22,18 +27,16 @@ const Login = () => {
                    </div>
                    <div className="form-control">
                      <label className="label">
-                       <span className="label-text">Password</span>
+                       <span className="label-text">Create Password</span>
                      </label>
                      <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
-                     <label className="label">
-                       <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                     </label>
+
                    </div>
                    <div className="form-control mt-6">
-                     <button className="btn btn-primary">Login</button>
+                     <button className="btn btn-primary">Register</button>
                    </div>
                    <div className='text-purple-700'>
-                     Do not Have an Account? <Link to="/register" className='underline'>Please Register</Link>
+                     Already Have an Account? <Link to="/login" className='underline'>Please Login</Link>
                    </div>
                  </div>
                </div>
@@ -44,4 +47,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
