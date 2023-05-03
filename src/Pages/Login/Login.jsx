@@ -1,5 +1,5 @@
-import GLogo from '../../../public/google.png'
-import GiLogo from '../../../public/gitHub.png'
+import GLogo from '../../../src/assets/google.png'
+import GiLogo from '../../../src/assets/github.png'
 import { Form, Link } from 'react-router-dom';
 import Footer from '../../Shared/Footer/Footer';
 import Navbar from '../../Shared/Navbar/Navbar';
@@ -81,9 +81,10 @@ const Login = () => {
                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                      </label>
                    </div>
-                   <div className="form-control mt-6">
+                   <Link to='/'><div className="form-control mt-6">
                      <button className="btn btn-primary">Login</button>
-                   </div>
+                   </div></Link>
+                   
                    <div className='text-purple-700'>
                      Do not Have an Account? <Link to="/register" className='underline'>Please Register</Link>
                    </div>

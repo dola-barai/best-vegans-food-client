@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { UserCircleIcon } from '@heroicons/react/24/solid'
 import { useContext } from 'react';
@@ -6,7 +5,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
 
-    const { user, signInUser } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     return (
         <div >
         <div className="navbar bg-purple-200">
@@ -22,13 +21,13 @@ const Navbar = () => {
               
             </div>
             <div className="navbar-end">
-              {signInUser ?
+              {user ?
               <h2>{user?.displayName}</h2> :
               <UserCircleIcon className="mr-3 h-8 w-8 text-purple-800" /> 
               
               }
-              {signInUser ?
-                <button className="btn btn-primary h-2 w-20">Logout</button> :
+              {user ?
+                <Link to='/login'><button className="btn btn-primary h-2 w-20">Logout</button></Link> :
                 <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
               }
             </div>
