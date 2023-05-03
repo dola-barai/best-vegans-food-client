@@ -16,7 +16,7 @@ const ChefSection = () => {
     return (
         <div>
             <h2 className="text-3xl text-center font-bold pt-4 mb-4 text-white">Our Best Chefs</h2>
-            <div className="grid grid-cols-3 gap-4 pb-4 justify-items-center">
+            <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 pb-4 justify-items-center">
                 {isLoading ? 
                   <div className="spinner"></div> :
                     chefs.map(chef => <ChefCard

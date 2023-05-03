@@ -5,7 +5,7 @@ const Blog = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='w-2/3 mx-auto my-2'>
+            <div className='md:w-2/3 sm:w-full mx-auto my-2'>
                 <div className='bg-white mb-2 p-3 rounded-lg'>
                     <h3 className='font-bold'>1. Tell us the differences between uncontrolled and controlled components.</h3>
                     <p>The main difference between controlled and uncontrolled components is the level of control that the application has over their behavior and functionality. Controlled components are handled and controlled solely by the program, whereas uncontrolled components may be influenced by external events or variables beyond the application control.</p>

@@ -4,8 +4,8 @@ const AboutUs = () => {
     return (
         <div className="bg-gradient-to-r from-blue-200 to-purple-200">
             <h2 className="text-3xl text-center font-bold pt-4 mb-4">About Us</h2>
-            <div className="grid grid-cols-2 gap-4 pb-4 justify-items-center">
-                <div className="ml-12 text-lg text-gray-600 pt-20">
+            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 pb-4 justify-items-center">
+                <div className="ml-12 text-lg text-gray-600 pt-20 sm:mb-2">
                 Vegans get all the nutrients that they need to be healthy, such as plant protein, fiber, and minerals, without all the nasty stuff in meat that may slow you down and make you sick, such as cholesterol and saturated animal fat. Vegans get all the nutrients that they need to be healthy, such as plant protein, fiber, and minerals, without all the nasty stuff in meat that may slow you down and make you sick, such as cholesterol and saturated animal fat. Vegans get all the nutrients that they need to be healthy, such as plant protein, fiber, and minerals, without all the nasty stuff in meat that may slow you down and make you sick, such as cholesterol and saturated animal fat.
                 </div>
                 <div className="grid grid-cols-2 gap-4 justify-items-center px-3">

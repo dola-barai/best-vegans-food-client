@@ -4,7 +4,7 @@ const OurFeature = () => {
     return (
         <div className="bg-gradient-to-r from-blue-200 to-purple-200 py-5">
             <h2 className="text-3xl text-center font-bold pt-4 mb-4">Out Feature</h2>
-            <div className="grid grid-cols-3 gap-4 pb-4 justify-items-center">
+            <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-4 pb-4 justify-items-center">
                 <div className=''>
                 <div className="card card-compact w-96 bg-white hover:bg-purple-300 shadow-xl border border-1 border-purple-300">
                   <TruckIcon className='mt-4 h-10 w-10  mx-auto text-purple-800'></TruckIcon>

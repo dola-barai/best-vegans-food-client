@@ -11,7 +11,7 @@ const RecipeLayout = () => {
             <Outlet></Outlet>
             <div>
             <h2 className="text-3xl text-center font-bold pt-4 mb-4 text-white">Recipes</h2>
-            <div  className="grid grid-cols-3 gap-3 mb-4">
+            <div  className="grid md:grid-cols-3 sm:grid-cols-1 gap-3 mb-4">
             {
                 recipes.map(recipe => <Recipe
                 key={recipe.id}
