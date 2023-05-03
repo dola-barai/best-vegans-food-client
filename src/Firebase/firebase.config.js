@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('environment variable', import.meta.env.VITE_APIKEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyAVZjzybDCQ_pPjoNq9QIsHFkyf6b5by_o",
-  authDomain: "best-vegans-food.firebaseapp.com",
-  projectId: "best-vegans-food",
-  storageBucket: "best-vegans-food.appspot.com",
-  messagingSenderId: "501023000321",
-  appId: "1:501023000321:web:374d52288f1dae655c7d00"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
