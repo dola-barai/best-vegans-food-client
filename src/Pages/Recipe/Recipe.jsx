@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Recipe = ({recipe}) => {
+
+  const [isFavorite, setIsFavorite] = useState(false);
+  function handleFavoriteClick() {
+    setIsFavorite(true);
+  }
     console.log(recipe);
     const {recipe_name, ingredients, cooking_method} = recipe;
     const notify = () => toast("This food is so amazing");
@@ -11,7 +17,7 @@ const Recipe = ({recipe}) => {
               <h2 className="text-2xl font-bold">{recipe_name}</h2>
               <p><span className="font-bold">Ingredients:</span> {ingredients}</p>
               <p><span className="font-bold">Cooking Method:</span> {cooking_method}</p>
-              <button className="btn btn-sm  w-1/4 mx-auto" onClick={notify}>Favorite</button>
+              <button className="btn btn-sm  w-1/4 mx-auto"  onClick={handleFavoriteClick} onClickCapture={notify} disabled={isFavorite}>Favorite</button>
               <ToastContainer></ToastContainer>
             </div>
           </div>
