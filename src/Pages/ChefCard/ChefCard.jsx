@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const ChefCard = ({chef}) => {
     
-    console.log(chef);
     const {name, likes, experience_years, num_recipes, picture, id} = chef;
     return (
         <div>

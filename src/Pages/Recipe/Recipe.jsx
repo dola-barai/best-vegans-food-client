@@ -7,13 +7,16 @@ const Recipe = ({recipe}) => {
   function handleFavoriteClick() {
     setIsFavorite(true);
   }
-    console.log(recipe);
-    const {recipe_name, ingredients, cooking_method} = recipe;
+
+    const {recipe_name, ingredients, cooking_method, picture} = recipe;
     const notify = () => toast("This food is so amazing");
     return (
         <div>
             <div className="card w-96 bg-purple-200 shadow-xl mx-auto">
             <div className="card-body">
+            <figure className="px-1 pt-1">
+               <img src={picture}  className="rounded-xl" />
+             </figure>
               <h2 className="text-2xl font-bold">{recipe_name}</h2>
               <p><span className="font-bold">Ingredients:</span> {ingredients}</p>
               <p><span className="font-bold">Cooking Method:</span> {cooking_method}</p>

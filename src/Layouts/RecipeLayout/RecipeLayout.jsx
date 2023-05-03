@@ -5,7 +5,6 @@ import Footer from "../../Shared/Footer/Footer";
 
 const RecipeLayout = () => {
     const recipes = useLoaderData();
-    console.log(recipes);
     return (
         <div>
             <Navbar></Navbar>
