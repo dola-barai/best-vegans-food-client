@@ -6,6 +6,7 @@ const ChefBanner = () => {
    const {name, likes, experience_years, num_recipes, picture} = chefData;
     return (
         <div>
+            <h2 className="text-3xl text-center font-bold pt-4 mb-4 text-white">Chef Details</h2>
             <div className="mx-auto my-4 w-2/3 bg-purple-200">
             <div className="hero-content flex-col lg:flex-row">
               <img src={picture} className="max-w-sm rounded-lg shadow-2xl" />

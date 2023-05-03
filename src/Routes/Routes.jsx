@@ -7,12 +7,14 @@ import Register from "../Pages/Home/Register/Register";
 import RecipeLayout from "../Layouts/RecipeLayout/RecipeLayout";
 import 'react-toastify/dist/ReactToastify.css';
 import ChefBanner from "../Pages/ChefBanner/ChefBanner";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -21,6 +23,7 @@ const router = createBrowserRouter([
     
         ],
     },
+
     {
         path: '/blog',
         element: <Blog></Blog>
