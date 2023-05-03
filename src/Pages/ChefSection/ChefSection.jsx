@@ -12,8 +12,8 @@ const ChefSection = () => {
            .catch(error => console.error(error))
     }, [])
     return (
-        <div className="bg-gradient-to-r from-purple-200 to-blue-200">
-            <h2 className="text-3xl text-center font-bold pt-4 mb-4">Our Best Chefs</h2>
+        <div>
+            <h2 className="text-3xl text-center font-bold pt-4 mb-4 text-white">Our Best Chefs</h2>
             <div className="grid grid-cols-3 gap-4 pb-4 justify-items-center">
                 {
                     chefs.map(chef => <ChefCard

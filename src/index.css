@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+#root{
+    background-image: url("https://img.freepik.com/premium-photo/pasta-penne-with-eggplant-pasta-alla-norma-traditional-italian-food_2829-20663.jpg?w=740");
+}
