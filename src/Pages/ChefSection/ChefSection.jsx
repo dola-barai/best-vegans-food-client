@@ -7,7 +7,7 @@ const ChefSection = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect( () => {
-        fetch('http://localhost:3000/chefs')
+        fetch('https://best-vegans-food-server-dibanishi81-gmailcom.vercel.app/chefs')
            .then(res => res.json())
            .then(data => setChefs(data))
            .catch(error => console.error(error))

@@ -32,12 +32,12 @@ const router = createBrowserRouter([
     {
         path: 'chefs',
         element: <RecipeLayout></RecipeLayout>,
-        loader: () => fetch('http://localhost:3000/recipe'),
+        loader: () => fetch('https://best-vegans-food-server-dibanishi81-gmailcom.vercel.app/recipe'),
         children: [
             {
                 path: ':id',
                 element: <ChefBanner></ChefBanner>,
-                loader: ({params}) => fetch(`http://localhost:3000/chefs/${params.id}`),
+                loader: ({params}) => fetch(`https://best-vegans-food-server-dibanishi81-gmailcom.vercel.app/chefs/${params.id}`),
             },
         ]
     },
