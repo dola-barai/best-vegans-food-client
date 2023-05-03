@@ -5,7 +5,7 @@ import Blog from "../Pages/Blog/Blog";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Home/Register/Register";
 import RecipeLayout from "../Layouts/RecipeLayout/RecipeLayout";
-
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
     {
