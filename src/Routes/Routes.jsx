@@ -2,11 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Blog from "../Pages/Blog/Blog";
 import Login from "../Pages/Login/Login";
-import Register from "../Pages/Home/Register/Register";
 import RecipeLayout from "../Layouts/RecipeLayout/RecipeLayout";
 import 'react-toastify/dist/ReactToastify.css';
 import ChefBanner from "../Pages/ChefBanner/ChefBanner";
 import ErrorPage from "../Pages/ErrorPage";
+import Register from "../Pages/Register/Register";
 
 
 const router = createBrowserRouter([
