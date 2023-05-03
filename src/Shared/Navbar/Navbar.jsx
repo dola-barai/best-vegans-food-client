@@ -15,8 +15,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex text-purple-800">
               
-                <Link to="/">Home</Link>
-                <Link className='ml-3' to="/blog">Blog</Link>
+                <Link to="/" className='btn-active active:bg-purple-600'>Home</Link>
+                <Link className='ml-3 active:bg-purple-600' to="/blog" >Blog</Link>
                 
               
             </div>
