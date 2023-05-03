@@ -6,7 +6,7 @@ const Recipe = ({recipe}) => {
     const notify = () => toast("This food is so amazing");
     return (
         <div>
-            <div className="card w-96 bg-slate-100 shadow-xl mx-auto">
+            <div className="card w-96 bg-purple-200 shadow-xl mx-auto">
             <div className="card-body">
               <h2 className="text-2xl font-bold">{recipe_name}</h2>
               <p><span className="font-bold">Ingredients:</span> {ingredients}</p>
