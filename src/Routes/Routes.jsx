@@ -7,27 +7,36 @@ import 'react-toastify/dist/ReactToastify.css';
 import ChefBanner from "../Pages/ChefBanner/ChefBanner";
 import ErrorPage from "../Pages/ErrorPage";
 import Register from "../Pages/Register/Register";
+import BVF from "../BVF/BVF";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>,
+        element: <BVF></BVF>,
+        errorElement: <ErrorPage></ErrorPage>
+    },
+    {
+        path: '/food',
+        element: <PrivateRoute><Main></Main></PrivateRoute>,
         errorElement: <ErrorPage></ErrorPage>
     },
 
     {
         path: '/blog',
-        element: <Blog></Blog>
+        element: <PrivateRoute><Blog></Blog></PrivateRoute>,
+        errorElement: <ErrorPage></ErrorPage>
     },
     {
         path: '/login',
         element: <Login></Login>,
-       
+        errorElement: <ErrorPage></ErrorPage>
     },
     {
         path: '/register',
-        element: <Register></Register>
+        element: <Register></Register>,
+        errorElement: <ErrorPage></ErrorPage>
     },
     {
         path: 'chefs',

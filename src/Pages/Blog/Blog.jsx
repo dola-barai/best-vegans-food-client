@@ -12,7 +12,7 @@ const Blog = () => {
                 </div>
                 <div className='bg-white mb-2 p-3 rounded-lg'>
                     <h3 className='font-bold'>2. How to validate React props using PropTypes?</h3>
-                    <p>Firstly, You need to import the PropTypes library at the top of your component file. Then, Define the expected types and shapes of your component's props in the component class. Lastly, pass props to the component as usual, and React will automatically validate them against the PropTypes defined in the component class.</p>
+                    <p>Firstly, You need to import the PropTypes library at the top of your component file. Then, Define the expected types and shapes of your components props in the component class. Lastly, pass props to the component as usual, and React will automatically validate them against the PropTypes defined in the component class.</p>
                 </div>
                 <div className='bg-white mb-2 p-3 rounded-lg'>
                     <h3 className='font-bold'>3. Tell us the difference between nodejs and express js.</h3>
