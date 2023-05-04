@@ -5,7 +5,16 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, signOutUser } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+      signOutUser()
+      .then(() => {
+        
+      }).catch(error => {
+         console.error(error)
+      });
+    }
     return (
         <div >
         <div className="navbar bg-purple-200">
@@ -22,15 +31,12 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
               {user ?
-              <h2>{user?.displayName}</h2> :
-              <UserCircleIcon className="mr-3 h-8 w-8 text-purple-800" /> 
-              
+              <><UserCircleIcon className="mr-3 h-8 w-8 text-purple-800" />
+              <button className='btn btn-xl' onClick={handleSignOut}>Sign out</button>
+              </> : <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
               }
-              {user ?
-                <Link to='/login'><button className="btn btn-primary h-2 w-20">Logout</button></Link> :
-                <Link to="/login"><button className="btn btn-primary h-2 w-20">Login</button></Link>
-              }
-            </div>
+
+          </div>
           </div>
          </div>
 );

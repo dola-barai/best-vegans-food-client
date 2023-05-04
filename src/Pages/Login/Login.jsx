@@ -23,8 +23,10 @@ const Login = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             setError('')
+
         })
         .catch(error => {
+            setError('')
             console.error(error.message);
             setError(error.message);
             event.target.reset();
@@ -81,9 +83,9 @@ const Login = () => {
                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                      </label>
                    </div>
-                   <Link to='/'><div className="form-control mt-6">
+                   <div className="form-control mt-6">
                      <button className="btn btn-primary">Login</button>
-                   </div></Link>
+                   </div>
                    
                    <div className='text-purple-700'>
                      Do not Have an Account? <Link to="/register" className='underline'>Please Register</Link>
@@ -92,6 +94,7 @@ const Login = () => {
                      <img onClick={googleLogin} className='mr-5' src={GLogo}></img>
                      <img onClick={githubLogin} src={GiLogo}></img>
                    </div>
+                   
                    <p className='text-red-500'>{error}</p>
                  </div>
                </div>
