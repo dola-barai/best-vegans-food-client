@@ -26,7 +26,7 @@ const Navbar = () => {
             
               <a className="btn btn-ghost normal-case text-3xl font-bold text-purple-800">Best Vegans Food</a>
             </div>
-            <div className="navbar-center hidden lg:flex text-purple-800">
+            <div className="navbar-center  lg:flex text-purple-800">
                 
                 <Link to="/food" className='font-bold active:bg-purple-600'>Food</Link>
                 <Link className='ml-3 active:bg-purple-600' to="/blog" >Blog</Link>
